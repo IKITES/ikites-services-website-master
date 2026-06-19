@@ -633,9 +633,18 @@ button { font-family: inherit; cursor: pointer; }
   padding:32px; border-radius:var(--radius-card);
   border:1px solid rgba(9,47,77,.10); background:#fff;
   display:flex; flex-direction:column; gap:14px;
+  overflow:hidden;
   transition:transform .3s ease, box-shadow .3s ease;
 }
 .story-card:hover { transform:translateY(-4px); box-shadow:0 20px 40px rgba(9,47,77,.12); }
+.story-card__img {
+  display:block;
+  width:calc(100% + 64px);
+  margin:-32px -32px 4px;
+  aspect-ratio:16 / 10;
+  object-fit:cover;
+  background:var(--navy-deep);
+}
 .story-card .tag {
   font-family:var(--font-mono); font-size:12px; font-weight:600;
   letter-spacing:.12em; color:var(--secondary);
